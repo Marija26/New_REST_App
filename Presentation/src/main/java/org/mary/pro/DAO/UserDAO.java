@@ -1,48 +1,48 @@
-package com.mary.project.DAO;
+package org.mary.pro.DAO;
 
-import com.mary.project.model.User;
+import org.mary.pro.model.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
 @Repository
-public class DAO {
-    private static final Map<String, User> empMap = new HashMap<String, User>();
+public class UserDAO {
+    private static final Map<String, User> UMap = new HashMap<String, User>();
 
     static {
-        initEmps();
+        initUsers();
     }
 
-    private static void initEmps() {
+    private static void initUsers() {
         User user1 = new User("Ivan", "Ivanov", "manager");
         User user2 = new User("Oleg", "Petrov", "lawyer");
         User user3 = new User("Nick", "Cage", "doctor");
 
-        empMap.put(user1.getLastName(), user1);
-        empMap.put(user2.getLastName(), user2);
-        empMap.put(user3.getLastName(), user3);
+        UMap.put(user1.getLastName(), user1);
+        UMap.put(user2.getLastName(), user2);
+        UMap.put(user3.getLastName(), user3);
     }
 
     public User getUser(String lastName) {
-        return empMap.get(lastName);
+        return UMap.get(lastName);
     }
 
     public User addUser(User user) {
-        empMap.put(user.getLastName(), user);
+        UMap.put(user.getLastName(), user);
         return user;
     }
 
     public User updateUser(User user) {
-        empMap.put(user.getLastName(), user);
+        UMap.put(user.getLastName(), user);
         return user;
     }
 
     public void deleteUser(String lastName) {
-        empMap.remove(lastName);
+        UMap.remove(lastName);
     }
 
     public List<User> getAllUsers() {
-        Collection<User> c = empMap.values();
+        Collection<User> c = UMap.values();
         List<User> list = new ArrayList<User>();
         list.addAll(c);
         return list;

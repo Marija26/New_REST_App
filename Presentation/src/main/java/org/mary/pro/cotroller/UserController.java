@@ -1,8 +1,8 @@
-package com.mary.project.cotroller;
+package org.mary.pro.cotroller;
 
 
-import com.mary.project.DAO.DAO;
-import com.mary.project.model.User;
+import org.mary.pro.DAO.UserDAO;
+import org.mary.pro.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -11,10 +11,10 @@ import java.util.List;
 
 @RestController
 
-public class Сontroller {
+public class UserController {
 
         @Autowired
-        private DAO dao;
+        private UserDAO dao;
 
         @RequestMapping("/")
         @ResponseBody

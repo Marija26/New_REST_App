@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>Domain</artifactId>
+    <packaging>jar</packaging>
+        <name>Domain</name>
 
-
-</project>
+        </project>

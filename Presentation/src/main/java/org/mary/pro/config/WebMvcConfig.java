@@ -1,4 +1,4 @@
-package com.mary.project.config;
+package org.mary.pro.config;
 
 
 import org.springframework.context.annotation.Configuration;
