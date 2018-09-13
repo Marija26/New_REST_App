@@ -14,12 +14,12 @@
         <plugins>
 
             <!-- Config: Maven Tomcat Plugin -->
-            <!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin%20-->
+
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
-                <!-- Config: contextPath and Port (Default: /SpringMVCRESTful : 8080) -->
+
 
                 <configuration>
                     <path>/</path>
@@ -71,14 +71,6 @@
             <artifactId>javax.servlet-api</artifactId>
             <version>3.1.0</version>
             <scope>provided</scope>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.apache.tomcat/tomcat -->
-        <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat</artifactId>
-            <version>9.0.4</version>
-            <type>pom</type>
         </dependency>
 
 

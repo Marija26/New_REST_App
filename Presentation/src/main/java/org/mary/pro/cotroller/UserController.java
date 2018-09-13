@@ -22,7 +22,7 @@ public class UserController {
             return "Welcome to RestTemplate Example.";
         }
 
-     
+
         @RequestMapping(value = "/users",
                 method = RequestMethod.GET,
                 produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
