@@ -22,12 +22,9 @@ public class UserController {
             return "Welcome to RestTemplate Example.";
         }
 
-        // URL:
-        // http://localhost:8080/SpringMVCRESTful/employees
-        // http://localhost:8080/SpringMVCRESTful/employees.xml
-        // http://localhost:8080/SpringMVCRESTful/employees.json
-        @RequestMapping(value = "/users", //
-                method = RequestMethod.GET, //
+     
+        @RequestMapping(value = "/users",
+                method = RequestMethod.GET,
                 produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public List<User> getUsers() {
@@ -35,11 +32,8 @@ public class UserController {
             return list;
         }
 
-        // URL:
-        // http://localhost:8080/SpringMVCRESTful/employee/{empNo}
-        // http://localhost:8080/SpringMVCRESTful/employee/{empNo}.xml
-        // http://localhost:8080/SpringMVCRESTful/employee/{empNo}.json
-        @RequestMapping(value = "/user/{lastName}", //
+
+        @RequestMapping(value = "/user/{lastName}",
                 method = RequestMethod.GET, //
                 produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
@@ -47,12 +41,9 @@ public class UserController {
             return dao.getUser(lastName);
         }
 
-        // URL:
-        // http://localhost:8080/SpringMVCRESTful/employee
-        // http://localhost:8080/SpringMVCRESTful/employee.xml
-        // http://localhost:8080/SpringMVCRESTful/employee.json
-        @RequestMapping(value = "/user", //
-                method = RequestMethod.POST, //
+
+        @RequestMapping(value = "/user",
+                method = RequestMethod.POST,
                 produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public User addUser(@RequestBody User user) {
@@ -61,12 +52,8 @@ public class UserController {
 
         }
 
-        // URL:
-        // http://localhost:8080/SpringMVCRESTful/employee
-        // http://localhost:8080/SpringMVCRESTful/employee.xml
-        // http://localhost:8080/SpringMVCRESTful/employee.json
-        @RequestMapping(value = "/user", //
-                method = RequestMethod.PUT, //
+        @RequestMapping(value = "/user",
+                method = RequestMethod.PUT,
                 produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public User updateUser(@RequestBody User user) {
@@ -74,10 +61,8 @@ public class UserController {
             return dao.updateUser(user);
         }
 
-        // URL:
-        // http://localhost:8080/SpringMVCRESTful/employee/{empNo}
-        @RequestMapping(value = "/users/{lastName}", //
-                method = RequestMethod.DELETE, //
+        @RequestMapping(value = "/users/{lastName}",
+                method = RequestMethod.DELETE,
                 produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public void deleteUser(@PathVariable("lastName") String lastName) {
