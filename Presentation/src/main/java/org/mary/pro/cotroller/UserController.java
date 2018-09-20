@@ -25,7 +25,7 @@ public class UserController {
 
         @RequestMapping(value = "/users",
                 method = RequestMethod.GET,
-                produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public List<User> getUsers() {
             List<User> list = dao.getAllUsers();
@@ -35,7 +35,7 @@ public class UserController {
 
         @RequestMapping(value = "/user/{lastName}",
                 method = RequestMethod.GET, //
-                produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public User getUser(@PathVariable("lastName") String lastName) {
             return dao.getUser(lastName);
@@ -44,7 +44,7 @@ public class UserController {
 
         @RequestMapping(value = "/user",
                 method = RequestMethod.POST,
-                produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public User addUser(@RequestBody User user) {
 
@@ -54,7 +54,7 @@ public class UserController {
 
         @RequestMapping(value = "/user",
                 method = RequestMethod.PUT,
-                produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public User updateUser(@RequestBody User user) {
 
@@ -63,7 +63,7 @@ public class UserController {
 
         @RequestMapping(value = "/users/{lastName}",
                 method = RequestMethod.DELETE,
-                produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
         @ResponseBody
         public void deleteUser(@PathVariable("lastName") String lastName) {
             dao.deleteUser(lastName);
