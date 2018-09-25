@@ -1,5 +1,6 @@
 package org.mary.pro.service;
 
+
 import org.mary.pro.model.User;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
