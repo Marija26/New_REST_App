@@ -1,7 +1,7 @@
 package org.mary.pro.cotroller;
 
 
-import org.mary.pro.DAO.UserDAO;
+import org.mary.pro.service.UserDAO;
 import org.mary.pro.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

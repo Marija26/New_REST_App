@@ -59,7 +59,7 @@
         <!--</dependency>-->
   </dependencies>
     <repositories>
-        <!-- ... possibly other repository elements ... -->
+        <!-- ... possibly other service elements ... -->
         <repository>
             <id>spring-snapshots</id>
             <url>https://repo.springsource.org/snapshot</url>
