@@ -1,12 +1,20 @@
 package org.mary.pro.DAO;
 
 import org.mary.pro.model.User;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
-
+@Component
 @Repository
 public class UserDAO {
+
+
+
+    public UserDAO() {
+
+    }
+
     private static final Map<String, User> UMap = new HashMap<String, User>();
 
     static {
@@ -47,4 +55,7 @@ public class UserDAO {
         list.addAll(c);
         return list;
     }
+
+
+
 }

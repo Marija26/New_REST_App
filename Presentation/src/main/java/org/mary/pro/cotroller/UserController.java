@@ -7,13 +7,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
-
 public class UserController {
 
-        @Autowired
+
+    public UserController() {
+    }
+
+    @Autowired
         private UserDAO dao;
 
         @RequestMapping("/")
@@ -21,6 +25,7 @@ public class UserController {
         public String welcome() {
             return "Welcome to RestTemplate Example.";
         }
+
 
 
         @RequestMapping(value = "/users",
@@ -35,9 +40,11 @@ public class UserController {
 
         @RequestMapping(value = "/user/{lastName}",
                 method = RequestMethod.GET, //
-                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+                produces = {MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE})
         @ResponseBody
-        public User getUser(@PathVariable("lastName") String lastName) {
+        public User getUser(@PathVariable("lastName") String lastName)throws IOException
+
+    {
             return dao.getUser(lastName);
         }
 

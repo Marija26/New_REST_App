@@ -11,6 +11,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
+
 public class SpringWebAppInitializer extends AbstractAnnotationConfigDispatcherServletInitializer  {
 
 
@@ -18,7 +19,8 @@ public class SpringWebAppInitializer extends AbstractAnnotationConfigDispatcherS
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-        appContext.register(ApplicationContextConfig.class, SecurityConfig.class);
+       appContext.register(ApplicationContextConfig.class);
+// SecurityConfig.class);
 
         servletContext.addListener(new ContextLoaderListener(appContext));
 
@@ -46,9 +48,11 @@ public class SpringWebAppInitializer extends AbstractAnnotationConfigDispatcherS
         encodingFilter.addMappingForUrlPatterns(null, true, "/*");
     }
     @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{SecurityConfig.class };
+   protected Class<?>[] getRootConfigClasses() {
+        return new Class[]{};
     }
+//                SecurityConfig.class };
+//    }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
