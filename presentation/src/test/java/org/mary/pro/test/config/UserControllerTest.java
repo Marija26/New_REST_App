@@ -1,10 +1,11 @@
-package org.mary.pro.cotroller;
+package org.mary.pro.test.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mary.pro.config.ApplicationContextConfig;
+import org.mary.pro.cotroller.UserController;
 import org.mary.pro.model.User;
 import org.mary.pro.service.UserDAO;
 import org.mockito.InjectMocks;

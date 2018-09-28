@@ -1,4 +1,4 @@
-package config;
+package org.mary.pro.test.config;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
