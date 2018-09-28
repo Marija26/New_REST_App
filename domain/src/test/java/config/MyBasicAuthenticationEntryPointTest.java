@@ -1,7 +1,8 @@
-package org.mary.pro.config;
+package config;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mary.pro.config.ApplicationContextConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.test.context.ContextConfiguration;
@@ -22,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @ContextConfiguration(classes = { ApplicationContextConfig.class})
-public class MyBasicAuthenticationEntryPointTest{
+public class MyBasicAuthenticationEntryPointTest {
 
 @Autowired
     private MockMvc mockMvc;

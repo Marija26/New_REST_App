@@ -60,11 +60,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         String encrytedPassword = this.passwordEncoder().encode(password);
         InMemoryUserDetailsManagerConfigurer<AuthenticationManagerBuilder> //
          mngConfig = auth.inMemoryAuthentication();
-
-        UserDetails u1 = User.withUsername("manager").password(encrytedPassword).roles("MANAGER").build();
         UserDetails u2 = User.withUsername("user").password(encrytedPassword).roles("USER").build();
-
-        mngConfig.withUser(u1);
         mngConfig.withUser(u2);
 
     }

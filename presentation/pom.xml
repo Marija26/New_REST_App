@@ -51,6 +51,18 @@
             <version>1.4.0</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>New_REST_App</groupId>
+            <artifactId>Dara_Source</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>New_REST_App</groupId>
+            <artifactId>Domain</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
         <!--<dependency>-->
             <!--<groupId>javax.servlet</groupId>-->
             <!--<artifactId>javax.servlet-api</artifactId>-->
